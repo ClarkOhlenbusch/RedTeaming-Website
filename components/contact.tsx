@@ -6,7 +6,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone } from "lucide-react"
 import { toast } from "@/components/ui/use-toast"
 
 export function Contact() {
@@ -63,19 +63,7 @@ export function Contact() {
                 <Phone className="h-6 w-6 text-red-500 mr-4 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-medium mb-1">Call Us</h3>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <MapPin className="h-6 w-6 text-red-500 mr-4 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg font-medium mb-1">Visit Us</h3>
-                  <p className="text-gray-300">
-                    123 Tech Plaza, Suite 400
-                    <br />
-                    San Francisco, CA 94105
-                  </p>
+                  <p className="text-gray-300">508-496-9557</p>
                 </div>
               </div>
             </div>
