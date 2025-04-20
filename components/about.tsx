@@ -45,7 +45,7 @@ export function About() {
         </div>
 
         {/* Mission, Vision, Approach, Clients Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="flex flex-col items-center text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm">
             <div className="bg-red-700/10 p-3 rounded-full mb-4">
               <Shield className="h-8 w-8 text-red-700" />

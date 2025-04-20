@@ -56,13 +56,13 @@ export function Hero() {
       <div className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-navy-900/90 to-transparent py-8">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-white">
-            <div className="text-center">
+            <div className="text-center py-2">
               <h3 className="text-lg font-medium">Strategic Advisory</h3>
             </div>
-            <div className="text-center">
+            <div className="text-center py-2">
               <h3 className="text-lg font-medium">Cybersecurity Excellence</h3>
             </div>
-            <div className="text-center">
+            <div className="text-center py-2">
               <h3 className="text-lg font-medium">Wireless Optimization</h3>
             </div>
           </div>

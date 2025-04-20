@@ -40,7 +40,9 @@ ${formData.message}
       `
 
       // Encode the mailto URL
-      const mailtoLink = `mailto:info@redteaming.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+      const mailtoLink = `mailto:info@redteaming.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+        body,
+      )}`
 
       // Open the user's email client
       window.location.href = mailtoLink
@@ -99,7 +101,7 @@ ${formData.message}
             </div>
           </div>
 
-          <div className="bg-white/10 rounded-lg p-8">
+          <div className="bg-white/10 rounded-lg p-6 md:p-8">
             <h3 className="text-2xl font-bold mb-6">Send Us a Message</h3>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

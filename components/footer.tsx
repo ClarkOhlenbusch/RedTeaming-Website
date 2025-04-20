@@ -14,7 +14,7 @@ export function Footer() {
   return (
     <footer className="bg-navy-800 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <Logo className="mb-6" />
             <p className="text-gray-300 mb-6">
