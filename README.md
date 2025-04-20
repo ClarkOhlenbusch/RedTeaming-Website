@@ -1,8 +1,3 @@
-Absolutely! Here’s a clean and professional `README.md` for your RedTeaming website repo:
-
----
-
-```markdown
 # RedTeaming Website
 
 Welcome to the RedTeaming website!
