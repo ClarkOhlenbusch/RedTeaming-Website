@@ -66,7 +66,7 @@ Feel free to reach out for inquiries or collaboration:
 
 ## 🧠 Credits
 
-Built by Clark Ohlenbusch and team.
+Built by Clark Ohlenbusch https://www.linkedin.com/in/clark-ohlenbusch-bb8b60253/
 ```
 
 Let me know if you want it tailored further (e.g., with images, badges, or a contribution section).
