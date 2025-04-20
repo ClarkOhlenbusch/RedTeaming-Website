@@ -32,34 +32,24 @@ export function Header() {
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          isScrolled ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-sm" : "bg-transparent",
+          isScrolled ? "bg-navy-900/95 backdrop-blur-sm shadow-sm h-16" : "bg-navy-900/80 h-20",
         )}
       >
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex h-20 items-center justify-between">
-            <div className="flex items-center">
+        <div className="container mx-auto px-4 md:px-6 h-full">
+          <div className="flex h-full items-center justify-between">
+            <div className="flex items-center h-full">
               <a
                 href="#hero"
                 onClick={(e) => {
                   e.preventDefault()
                   scrollToSection("hero")
                 }}
-                className="flex items-center"
+                className="flex items-center h-full"
               >
-                <Logo
-                  className={cn(
-                    "h-10 w-auto transition-colors",
-                    isScrolled ? "text-navy-700 dark:text-white" : "text-white",
-                  )}
-                />
+                <Logo />
               </a>
             </div>
-            <nav
-              className={cn(
-                "hidden md:flex space-x-8 items-center",
-                isScrolled ? "text-navy-700 dark:text-white" : "text-white",
-              )}
-            >
+            <nav className={cn("hidden md:flex space-x-8 items-center", "text-white")}>
               <a
                 href="#services"
                 onClick={(e) => {
@@ -112,28 +102,14 @@ export function Header() {
               </a>
             </nav>
             <div className="flex items-center space-x-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                className={cn(
-                  "rounded-full",
-                  isScrolled
-                    ? "text-navy-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
-                    : "text-white hover:bg-white/10",
-                )}
-              >
+              <Button variant="ghost" size="icon" className="rounded-full text-white hover:bg-white/10">
                 <Search className="h-5 w-5" />
                 <span className="sr-only">Search</span>
               </Button>
               <Button
                 variant="ghost"
                 size="sm"
-                className={cn(
-                  "md:hidden",
-                  isScrolled
-                    ? "text-navy-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
-                    : "text-white hover:bg-white/10",
-                )}
+                className="md:hidden text-white hover:bg-white/10"
                 onClick={() => setIsMobileMenuOpen(true)}
               >
                 <Menu className="h-6 w-6" />
@@ -153,16 +129,18 @@ export function Header() {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-white dark:bg-gray-900 overflow-y-auto">
+        <div className="fixed inset-0 z-50 bg-navy-900 overflow-y-auto">
           <div className="container mx-auto px-4 py-4">
-            <div className="flex items-center justify-between mb-8">
-              <Logo className="h-10 w-auto text-navy-700 dark:text-white" />
+            <div className="flex items-center justify-between mb-8 h-16">
+              <div className="h-full">
+                <Logo />
+              </div>
               <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
-                <X className="h-6 w-6" />
+                <X className="h-6 w-6 text-white" />
                 <span className="sr-only">Close menu</span>
               </Button>
             </div>
-            <nav className="flex flex-col space-y-6 text-lg font-medium text-navy-700 dark:text-white">
+            <nav className="flex flex-col space-y-6 text-lg font-medium text-white">
               <a
                 href="#services"
                 onClick={(e) => {

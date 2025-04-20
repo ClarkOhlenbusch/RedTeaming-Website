@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 
 interface LogoProps {
@@ -6,22 +7,15 @@ interface LogoProps {
 
 export function Logo({ className }: LogoProps) {
   return (
-    <div className={cn("flex items-center gap-2", className)}>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="h-8 w-8 text-red-700"
-      >
-        <path d="M12 2L2 7l10 5 10-5-10-5z" />
-        <path d="M2 17l10 5 10-5" />
-        <path d="M2 12l10 5 10-5" />
-      </svg>
-      <span className="font-bold text-xl">RedTeaming</span>
+    <div className={cn("flex items-center h-full py-2", className)}>
+      <Image
+        src="/images/redteaming-logo.png"
+        alt="RedTeaming Logo"
+        width={220}
+        height={60}
+        className="w-auto h-full max-h-full object-contain"
+        priority
+      />
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import { Building2, Landmark, Hospital, Factory, Globe, Shield } from "lucide-react"
+import Image from "next/image"
 
 export function Industries() {
   const industries = [
@@ -35,8 +36,14 @@ export function Industries() {
   ]
 
   return (
-    <section id="industries" className="py-20 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4">
+    <section id="industries" className="py-20 relative">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image src="/images/city-grid.jpg" alt="City grid background" fill className="object-cover" />
+        <div className="absolute inset-0 bg-white/95 dark:bg-navy-900/95"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-navy-800 dark:text-white mb-4">Industries We Serve</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -49,7 +56,7 @@ export function Industries() {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center"
+              className="bg-white dark:bg-navy-800 p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center"
             >
               <div className="flex justify-center">{industry.icon}</div>
               <h3 className="text-xl font-bold text-navy-800 dark:text-white mb-3">{industry.title}</h3>

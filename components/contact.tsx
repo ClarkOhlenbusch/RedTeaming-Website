@@ -16,27 +16,57 @@ export function Contact() {
     company: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target
     setFormData((prev) => ({ ...prev, [id]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // In a real implementation, you would send this data to your server
-    console.log("Form submitted:", formData)
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you as soon as possible.",
-    })
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      message: "",
-    })
+    setIsSubmitting(true)
+
+    try {
+      // Create mailto link with form data
+      const subject = `Contact Form Submission from ${formData.name}`
+      const body = `
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company}
+
+Message:
+${formData.message}
+      `
+
+      // Encode the mailto URL
+      const mailtoLink = `mailto:info@redteaming.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+
+      // Open the user's email client
+      window.location.href = mailtoLink
+
+      toast({
+        title: "Email client opened",
+        description: "Please send the email from your email client to complete your message submission.",
+      })
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        message: "",
+      })
+    } catch (error) {
+      console.error("Error sending email:", error)
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message. Please try again.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -129,8 +159,8 @@ export function Contact() {
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-red-700 hover:bg-red-800 text-white">
-                Send Message
+              <Button type="submit" className="w-full bg-red-700 hover:bg-red-800 text-white" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>

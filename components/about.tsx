@@ -1,4 +1,5 @@
 import { Shield, Zap, Target, Users } from "lucide-react"
+import Image from "next/image"
 
 export function About() {
   return (
@@ -12,63 +13,78 @@ export function About() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <h3 className="text-2xl font-bold text-navy-800 dark:text-white mb-6">Our Story</h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Founded by engineers and consultants who saw a gap in advisory services that merged business strategy with
-              real-world technical execution, RedTeaming has grown to become a trusted partner for organizations
-              navigating digital transformation.
-            </p>
-            <p className="text-gray-600 dark:text-gray-300">
-              We combine the scale and polish of a big firm with the agility and depth of a niche partner. Our mission
-              is to guide organizations through digital transformation with confidence—especially in high-risk areas
-              like cybersecurity and wireless infrastructure.
-            </p>
-          </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm">
-                <div className="bg-red-700/10 p-3 rounded-full mb-4">
-                  <Shield className="h-8 w-8 text-red-700" />
-                </div>
-                <h4 className="text-lg font-bold text-navy-800 dark:text-white mb-2">Mission</h4>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  Help organizations navigate complexity through advisory services in strategy, risk, and technology.
-                </p>
-              </div>
-              <div className="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm">
-                <div className="bg-red-700/10 p-3 rounded-full mb-4">
-                  <Target className="h-8 w-8 text-red-700" />
-                </div>
-                <h4 className="text-lg font-bold text-navy-800 dark:text-white mb-2">Vision</h4>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  Become a trusted partner known for combining technical depth with strategic insight across industries.
-                </p>
-              </div>
-              <div className="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm">
-                <div className="bg-red-700/10 p-3 rounded-full mb-4">
-                  <Zap className="h-8 w-8 text-red-700" />
-                </div>
-                <h4 className="text-lg font-bold text-navy-800 dark:text-white mb-2">Approach</h4>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  Deliver practical, measurable value with a confident, strategic, and technically credible voice.
-                </p>
-              </div>
-              <div className="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm">
-                <div className="bg-red-700/10 p-3 rounded-full mb-4">
-                  <Users className="h-8 w-8 text-red-700" />
-                </div>
-                <h4 className="text-lg font-bold text-navy-800 dark:text-white mb-2">Clients</h4>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  We work across industries including Government, Enterprise, Healthcare, and Defense.
-                </p>
-              </div>
+        {/* Our Story Section with Background Image */}
+        <div className="relative rounded-xl overflow-hidden mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            {/* Left side content */}
+            <div className="bg-white dark:bg-navy-800 p-8 md:p-12 z-10">
+              <h3 className="text-2xl font-bold text-navy-800 dark:text-white mb-6">Our Story</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
+                Founded by engineers and consultants who saw a gap in advisory services that merged business strategy
+                with real-world technical execution, RedTeaming has grown to become a trusted partner for organizations
+                navigating digital transformation.
+              </p>
+              <p className="text-gray-600 dark:text-gray-300">
+                We combine the scale and polish of a big firm with the agility and depth of a niche partner. Our mission
+                is to guide organizations through digital transformation with confidence—especially in high-risk areas
+                like cybersecurity and wireless infrastructure.
+              </p>
+            </div>
+
+            {/* Right side image */}
+            <div className="relative h-full min-h-[300px] lg:min-h-0">
+              <Image
+                src="/images/cybersecurity-background.jpg"
+                alt="Cybersecurity operations"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-navy-900/50"></div>
             </div>
           </div>
         </div>
 
-        <div className="bg-navy-800 text-white rounded-lg overflow-hidden">
+        {/* Mission, Vision, Approach, Clients Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="flex flex-col items-center text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm">
+            <div className="bg-red-700/10 p-3 rounded-full mb-4">
+              <Shield className="h-8 w-8 text-red-700" />
+            </div>
+            <h4 className="text-lg font-bold text-navy-800 dark:text-white mb-2">Mission</h4>
+            <p className="text-gray-600 dark:text-gray-300 text-sm">
+              Help organizations navigate complexity through advisory services in strategy, risk, and technology.
+            </p>
+          </div>
+          <div className="flex flex-col items-center text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm">
+            <div className="bg-red-700/10 p-3 rounded-full mb-4">
+              <Target className="h-8 w-8 text-red-700" />
+            </div>
+            <h4 className="text-lg font-bold text-navy-800 dark:text-white mb-2">Vision</h4>
+            <p className="text-gray-600 dark:text-gray-300 text-sm">
+              Become a trusted partner known for combining technical depth with strategic insight across industries.
+            </p>
+          </div>
+          <div className="flex flex-col items-center text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm">
+            <div className="bg-red-700/10 p-3 rounded-full mb-4">
+              <Zap className="h-8 w-8 text-red-700" />
+            </div>
+            <h4 className="text-lg font-bold text-navy-800 dark:text-white mb-2">Approach</h4>
+            <p className="text-gray-600 dark:text-gray-300 text-sm">
+              Deliver practical, measurable value with a confident, strategic, and technically credible voice.
+            </p>
+          </div>
+          <div className="flex flex-col items-center text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm">
+            <div className="bg-red-700/10 p-3 rounded-full mb-4">
+              <Users className="h-8 w-8 text-red-700" />
+            </div>
+            <h4 className="text-lg font-bold text-navy-800 dark:text-white mb-2">Clients</h4>
+            <p className="text-gray-600 dark:text-gray-300 text-sm">
+              We work across industries including Government, Enterprise, Healthcare, and Defense.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-navy-800 text-white rounded-lg overflow-hidden mt-16">
           <div className="grid grid-cols-1 md:grid-cols-3">
             <div className="p-8 border-b md:border-b-0 md:border-r border-white/10">
               <h4 className="text-xl font-bold mb-3">Strategic Insight</h4>

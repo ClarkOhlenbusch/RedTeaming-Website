@@ -1,5 +1,6 @@
 import { Shield, Wifi, BarChart3, Lock, Server, Users } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Image from "next/image"
 
 export function Services() {
   const services = [
@@ -46,6 +47,35 @@ export function Services() {
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             We combine the scale and polish of a big firm with the agility and technical expertise of a niche provider.
           </p>
+        </div>
+
+        {/* Featured Service with Background Image */}
+        <div className="relative rounded-xl overflow-hidden mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            {/* Left side content */}
+            <div className="bg-navy-800 p-8 md:p-12 text-white z-10">
+              <h3 className="text-2xl font-bold mb-6">Enterprise Cybersecurity</h3>
+              <p className="text-white/80 mb-6">
+                In today's threat landscape, organizations need comprehensive security strategies that protect their
+                most valuable assets while enabling business growth.
+              </p>
+              <p className="text-white/80">
+                RedTeaming delivers tailored cybersecurity solutions that combine technical depth with strategic
+                insight, helping you navigate complexity with confidence.
+              </p>
+            </div>
+
+            {/* Right side image */}
+            <div className="relative h-full min-h-[300px] lg:min-h-0">
+              <Image
+                src="/images/network-security.jpg"
+                alt="Network security operations"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-navy-900/50"></div>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
