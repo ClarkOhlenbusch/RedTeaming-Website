@@ -31,13 +31,13 @@ export function Header() {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          isScrolled ? "bg-navy-900/95 backdrop-blur-sm shadow-sm h-16" : "bg-navy-900/80 h-20",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
+          isScrolled ? "bg-navy-900/95 backdrop-blur-sm shadow-sm h-[80px]" : "bg-navy-900/90 h-[80px]",
         )}
       >
-        <div className="container mx-auto px-4 md:px-6 h-full">
+        <div className="container mx-auto px-6 h-full">
           <div className="flex h-full items-center justify-between">
-            <div className="flex items-center h-full">
+            <div className="flex items-center h-full py-2">
               <a
                 href="#hero"
                 onClick={(e) => {
@@ -46,7 +46,7 @@ export function Header() {
                 }}
                 className="flex items-center h-full"
               >
-                <Logo />
+                <Logo className="h-full max-h-10" />
               </a>
             </div>
             <nav className={cn("hidden md:flex space-x-8 items-center", "text-white")}>
@@ -133,7 +133,7 @@ export function Header() {
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center justify-between mb-8 h-16">
               <div className="h-full">
-                <Logo />
+                <Logo className="h-full max-h-10" />
               </div>
               <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                 <X className="h-6 w-6 text-white" />
