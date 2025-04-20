@@ -1,30 +1,77 @@
-# Redteaming website design
+Absolutely! Here’s a clean and professional `README.md` for your RedTeaming website repo:
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+---
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/clark-ohlenbuschs-projects/v0-redteaming-website-design)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/FjvAZ5pSlqU)
+```markdown
+# RedTeaming Website
 
-## Overview
+Welcome to the RedTeaming website!
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+This is the official one-page site for **RedTeaming**, a modern consulting firm specializing in **Cybersecurity**, **Wireless Technologies**, and **Strategic Advisory Services**. Built using **Next.js** and **Tailwind CSS**, the site is designed to showcase our services, industries, insights, and more with a clean and responsive layout.
 
-## Deployment
+🌐 **Live Site**: [https://redteaming-clark-ohlenbuschs-projects.vercel.app/](https://redteaming-clark-ohlenbuschs-projects.vercel.app/)
 
-Your project is live at:
+---
 
-**[https://vercel.com/clark-ohlenbuschs-projects/v0-redteaming-website-design](https://vercel.com/clark-ohlenbuschs-projects/v0-redteaming-website-design)**
+## 🚀 Features
 
-## Build your app
+- One-page scrollable layout with smooth navigation
+- Services, Industries, Insights, Case Studies, About, Careers, and Contact sections
+- Fully responsive across desktop and mobile
+- Clean, enterprise-grade UI inspired by firms like Guidehouse and KPMG
+- Built using:
+  - [Next.js](https://nextjs.org/)
+  - [Tailwind CSS](https://tailwindcss.com/)
+  - [Vercel Hosting](https://vercel.com/)
 
-Continue building your app on:
+---
 
-**[https://v0.dev/chat/projects/FjvAZ5pSlqU](https://v0.dev/chat/projects/FjvAZ5pSlqU)**
+## 📁 Project Structure
 
-## How It Works
+```
+/components     # Reusable UI components
+/pages          # Page files (only one in this case)
+/public         # Static assets (images, favicon, etc.)
+/styles         # Global styles
+```
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+---
+
+## 🛠️ Development
+
+### Install dependencies:
+
+```bash
+npm install
+```
+
+### Run locally:
+
+```bash
+npm run dev
+```
+
+Site will be live at [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 📝 Custom Domain
+
+We're currently using a Vercel subdomain. Custom domain (`redteaming.com`) will be added soon!
+
+---
+
+## 📬 Contact
+
+Feel free to reach out for inquiries or collaboration:
+
+- Email: info@redteaming.com
+  
+---
+
+## 🧠 Credits
+
+Built by Clark Ohlenbusch and team.
+```
+
+Let me know if you want it tailored further (e.g., with images, badges, or a contribution section).
