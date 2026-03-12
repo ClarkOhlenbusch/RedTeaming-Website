@@ -3,13 +3,19 @@ import { cn } from "@/lib/utils"
 
 interface LogoProps {
   className?: string
+  variant?: "default" | "white"
 }
 
-export function Logo({ className }: LogoProps) {
+export function Logo({ className, variant = "default" }: LogoProps) {
+  const src =
+    variant === "white"
+      ? "/images/redteaming-logo-white.png"
+      : "/images/redteaming-logo.png"
+
   return (
     <div className={cn("flex items-center px-0", className)}>
       <Image
-        src="/images/redteaming-logo.png"
+        src={src}
         alt="RedTeaming Logo"
         width={160}
         height={40}
