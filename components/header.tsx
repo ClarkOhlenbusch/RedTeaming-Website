@@ -31,8 +31,8 @@ export function Header() {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
-          isScrolled ? "bg-navy-900/95 backdrop-blur-sm shadow-sm h-[80px]" : "bg-navy-900/90 h-[80px]",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
+          isScrolled ? "bg-white/95 backdrop-blur-sm shadow-sm border-gray-200 h-[80px]" : "bg-white/90 border-transparent h-[80px]",
         )}
       >
         <div className="container mx-auto px-6 h-full">
@@ -49,7 +49,7 @@ export function Header() {
                 <Logo className="h-full max-h-10" />
               </a>
             </div>
-            <nav className={cn("hidden md:flex space-x-8 items-center", "text-white")}>
+            <nav className={cn("hidden md:flex space-x-8 items-center", "text-navy-900")}>
               <a
                 href="#services"
                 onClick={(e) => {
@@ -102,14 +102,14 @@ export function Header() {
               </a>
             </nav>
             <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="icon" className="rounded-full text-white hover:bg-white/10">
+              <Button variant="ghost" size="icon" className="rounded-full text-navy-900 hover:bg-navy-900/10">
                 <Search className="h-5 w-5" />
                 <span className="sr-only">Search</span>
               </Button>
               <Button
                 variant="ghost"
                 size="sm"
-                className="md:hidden text-white hover:bg-white/10"
+                className="md:hidden text-navy-900 hover:bg-navy-900/10"
                 onClick={() => setIsMobileMenuOpen(true)}
               >
                 <Menu className="h-6 w-6" />
