@@ -32,7 +32,7 @@ export function Header() {
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
-          isScrolled ? "bg-white/95 backdrop-blur-sm shadow-sm border-gray-200 h-[80px]" : "bg-white/90 border-transparent h-[80px]",
+          isScrolled ? "bg-navy-900/95 backdrop-blur-sm shadow-sm border-navy-800 h-[80px]" : "bg-navy-900/90 border-transparent h-[80px]",
         )}
       >
         <div className="container mx-auto px-6 h-full">
@@ -46,10 +46,10 @@ export function Header() {
                 }}
                 className="flex items-center h-full"
               >
-                <Logo className="h-full max-h-10" />
+                <Logo className="h-full max-h-10" variant="white" />
               </a>
             </div>
-            <nav className={cn("hidden md:flex space-x-8 items-center", "text-navy-900")}>
+            <nav className={cn("hidden md:flex space-x-8 items-center", "text-white")}>
               <a
                 href="#services"
                 onClick={(e) => {
@@ -102,14 +102,14 @@ export function Header() {
               </a>
             </nav>
             <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="icon" className="rounded-full text-navy-900 hover:bg-navy-900/10">
+              <Button variant="ghost" size="icon" className="rounded-full text-white hover:bg-white/10">
                 <Search className="h-5 w-5" />
                 <span className="sr-only">Search</span>
               </Button>
               <Button
                 variant="ghost"
                 size="sm"
-                className="md:hidden text-navy-900 hover:bg-navy-900/10"
+                className="md:hidden text-white hover:bg-white/10"
                 onClick={() => setIsMobileMenuOpen(true)}
               >
                 <Menu className="h-6 w-6" />
@@ -133,7 +133,7 @@ export function Header() {
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center justify-between mb-8 h-16">
               <div className="h-full">
-                <Logo className="h-full max-h-10" />
+                <Logo className="h-full max-h-10" variant="white" />
               </div>
               <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                 <X className="h-6 w-6 text-white" />
